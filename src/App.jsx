@@ -19,7 +19,7 @@ function App() {
       <div className='container'>
         <TaskForm />
         <div>
-          {tasks.map((task) => (
+          {tasks?.map((task) => (
             <Task key={task.id} task={task} />
           ))}
         </div>
