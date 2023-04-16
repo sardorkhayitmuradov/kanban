@@ -2,13 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    },
-    {
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
@@ -16,20 +9,20 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/server.js"
+      "source": "/api/(.*)",
+      "destination": "/server.js"
     },
     {
-      "src": "/(?!api)(.*)",
+      "source": "/(?!api)(.*)",
       "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
       "continue": true
     },
     {
-      "src": "/(.*)",
+      "source": "/(.*)",
       "headers": { "cache-control": "s-maxage=0" },
-      "dest": "/$1"
+      "destination": "/$1"
     }
   ]
 }
