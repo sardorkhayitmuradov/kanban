@@ -1,12 +1,12 @@
-const jsonServer = require('json-server');
+import jsonServer from 'json-server';
 const server = jsonServer.create();
-const router = jsonServer.router('data.json'); // Updated to use 'data.json'
+const router = jsonServer.router('data.json');
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 server.use(router);
 
-module.exports = (req, res) => {
+export default (req, res) => {
   const handler = server(req, res);
   return handler;
 };
