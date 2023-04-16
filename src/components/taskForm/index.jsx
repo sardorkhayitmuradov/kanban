@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useDropzone } from 'react-dropzone';
-import { addTaskRequest } from '../../redux/actions/taskActions';
+import { addTaskRequest, fetchTasksRequest } from '../../redux/actions/taskActions';
 import './index.css';
 
 const TaskForm = () => {
@@ -28,6 +28,10 @@ const TaskForm = () => {
     setDescription('');
     setFile(null);
   };
+
+  useEffect(() => {
+    dispatch(fetchTasksRequest());
+  }, [dispatch]);
 
   return (
     <form onSubmit={handleSubmit} className='task-form'>
