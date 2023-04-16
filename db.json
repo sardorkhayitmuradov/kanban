@@ -1,16 +1,10 @@
 {
   "tasks": [
     {
-      "title": "lkdmslkfmlsa",
-      "description": "flksnfdak",
-      "file": "blob:http://localhost:5173/92ce0575-3fca-4666-95b2-358093074bff",
-      "id": 4
-    },
-    {
-      "title": "lkfnlkdfs",
-      "description": "fkdnfkns",
-      "file": "blob:http://localhost:5173/85e431a6-e401-4299-a04a-fa54727e1074",
-      "id": 5
+      "title": "1 Task",
+      "description": "task description",
+      "file": "blob:https://kanban-website.vercel.app/6990040c-8e48-4e45-8b9f-6b3e7b5cc4b2",
+      "id": 1
     }
   ]
 }
