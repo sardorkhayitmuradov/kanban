@@ -9,7 +9,7 @@ import {
   DELETE_TASK_SUCCESS,
 } from '../actions/actionTypes';
 
-const API_URL = 'https://kanban-website.vercel.app/tasks'
+const API_URL = 'https://kanban-website.vercel.app/api/tasks';
 
 function* fetchTasks() {
   try {
