@@ -9,9 +9,11 @@ import {
   DELETE_TASK_SUCCESS,
 } from '../actions/actionTypes';
 
+const API_URL = 'http://localhost:5000/tasks'
+
 function* fetchTasks() {
   try {
-    const response = yield call(axios.get, 'http://localhost:5000/tasks');
+    const response = yield call(axios.get, API_URL);
     yield put({ type: FETCH_TASKS_SUCCESS, payload: response.data });
   } catch (error) {
     console.error(error);
@@ -20,7 +22,7 @@ function* fetchTasks() {
 
 function* addTask(action) {
   try {
-    const response = yield call(axios.post, 'http://localhost:5000/tasks', action.payload);
+    const response = yield call(axios.post, API_URL, action.payload);
     yield put({ type: ADD_TASK_SUCCESS, payload: response.data });
   } catch (error) {
     console.error(error);
@@ -29,7 +31,7 @@ function* addTask(action) {
 
 function* deleteTask(action) {
   try {
-    yield call(axios.delete, `http://localhost:5000/tasks/${action.payload}`);
+    yield call(axios.delete, `${API_URL}/${action.payload}`);
     yield put({ type: DELETE_TASK_SUCCESS, payload: action.payload });
   } catch (error) {
     console.error(error);
