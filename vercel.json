@@ -16,12 +16,10 @@
     },
     {
       "source": "/(?!api)(.*)",
-      "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" },
       "continue": true
     },
     {
       "source": "/(.*)",
-      "headers": { "cache-control": "s-maxage=0" },
       "destination": "/$1"
     }
   ]
