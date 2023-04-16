@@ -1,5 +1,6 @@
 // See https://github.com/typicode/json-server#module
-import { create, router as _router, defaults, rewriter } from 'json-server'
+import pkg from 'json-server'
+const { create, router: _router, defaults, rewriter } = pkg;
 const server = create()
 const router = _router('db.json')
 const middlewares = defaults()
