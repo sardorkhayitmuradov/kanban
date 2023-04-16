@@ -9,7 +9,7 @@ import {
   DELETE_TASK_SUCCESS,
 } from '../actions/actionTypes';
 
-const API_URL = process.env.REACT_APP_API_URL || '/tasks';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 function* fetchTasks() {
   try {
