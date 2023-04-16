@@ -1,0 +1,22 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 20px;
+  /* width: 100%; */
+}
+
+.task-form input,
+.task-form textarea {
+    width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.task-form button {
+    /* width: 100%; */
+  width: 100px;
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
