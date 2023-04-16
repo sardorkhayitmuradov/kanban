@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/db.js"
+      "destination": "/api/db.mjs"
     }
   ],
   "headers": [
